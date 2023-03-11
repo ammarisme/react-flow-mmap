@@ -106,6 +106,7 @@ function Flow() {
   );
 
   return (
+
     <ReactFlow
       nodes={nodes}
       edges={edges}
@@ -123,7 +124,6 @@ function Flow() {
     >
       <Controls showInteractive={false} />
       <Panel position="top-left" className="header">
-        React Flow Mind Map
       </Panel>
     </ReactFlow>
   );
