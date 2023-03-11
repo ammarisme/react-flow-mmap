@@ -3,8 +3,15 @@ import { render } from "react-dom"
 import MaterialUITextbox from './MaterialUITextbox'
 import MaterialUIButton from './MaterialUIButton'
 import Accordion  from "./Accordion";
+import { Auth } from 'aws-amplify';
 
-
+async function signOut() {
+    try {
+        await Auth.signOut();
+    } catch (error) {
+        console.log('error signing out: ', error);
+    }
+}
 const data = [
     {
       name: 'Web page title - 1',
@@ -60,6 +67,11 @@ export class WebExplore extends React.Component {
             label="Save"
             fullWidth={false}
             onClick={() => {}}
+          />
+          <MaterialUIButton
+            label="Save"
+            fullWidth={false}
+            onClick={signOut}
           />
           </>
         );
