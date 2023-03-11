@@ -69,7 +69,7 @@ export class WebExplore extends React.Component {
             onClick={() => {}}
           />
           <MaterialUIButton
-            label="Save"
+            label="Logout"
             fullWidth={false}
             onClick={signOut}
           />
