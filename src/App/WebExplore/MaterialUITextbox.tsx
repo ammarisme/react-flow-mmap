@@ -40,7 +40,7 @@ function MaterialUITextbox(props:any) {
   } = props;
 
   return (
-    <div style={{ ...styles.inputContainer, width: fullWidth ? '100%' : 'auto' }}>
+    <div style={{width: fullWidth ? '100%' : 'auto' }}>
       {label && <label style={styles.label}>{label}</label>}
       <input
         type="text"

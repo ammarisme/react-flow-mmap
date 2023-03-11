@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 
-const Accordion = ({ data }) => {
+const Accordion = ({ data} : any) => {
   const [openItems, setOpenItems] = useState([]);
 
-  const toggleItem = (index) => {
+  const toggleItem = (index:never) => {
     if (openItems.includes(index)) {
       setOpenItems(openItems.filter((item) => item !== index));
     } else {
@@ -11,7 +11,7 @@ const Accordion = ({ data }) => {
     }
   };
 
-  const renderItem = (item, index) => {
+  const renderItem = (item:any, index:never) => {
     const isOpen = openItems.includes(index);
 
     return (
@@ -22,7 +22,7 @@ const Accordion = ({ data }) => {
         <span>{item.name}</span>
         {isOpen && (
           <div>
-            {item.children && item.children.map((child, i) => renderItem(child, i))}
+            {item.children && item.children.map((child:any, i:never) => renderItem(child, i))}
           </div>
         )}
       </div>
@@ -31,7 +31,7 @@ const Accordion = ({ data }) => {
 
   return (
     <div>
-      {data.map((item, index) => renderItem(item, index))}
+      {data.map((item:any, index:never) => renderItem(item, index))}
     </div>
   );
 };

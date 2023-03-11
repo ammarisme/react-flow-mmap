@@ -48,7 +48,7 @@ export class WebExplore extends React.Component {
           <MaterialUITextbox
             label="Enter URL"
             fullWidth={true}
-            onChange={(event) => {}} //setName(event.target.value)
+            onChange={(event:any) => {}} //setName(event.target.value)
           />
           <MaterialUIButton
             label="Add site"
